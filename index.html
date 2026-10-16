@@ -4,123 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Whisperers - Tunis Chapter</title>
-    <!-- Tailwind CSS for Beautiful, Modern Styling -->
     <script src="https://tailwindcss.com"></script>
     <style>
-        .glow-effect {
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        html { scroll-behavior: smooth; }
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
         }
+        .neon-orb-1 { background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); }
+        .neon-orb-2 { background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%); }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
-
-    <!-- Navbar -->
-    <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 bg-slate-950/70 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <span class="text-2xl">🔮</span>
-                <span class="font-bold text-xl tracking-tight bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">AI Whisperers Tunis</span>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased bg-grid relative min-h-screen overflow-x-hidden">
+    <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] neon-orb-1 pointer-events-none z-0"></div>
+    <div class="absolute top-[40%] right-[-10%] w-[600px] h-[600px] neon-orb-2 pointer-events-none z-0"></div>
+    
+    <header class="border-b border-slate-900 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3.5">
+                <div class="bg-gradient-to-tr from-blue-600 to-indigo-600 p-2.5 rounded-xl">🔮</div>
+                <div>
+                    <span class="font-extrabold text-lg">AI Whisperers</span>
+                    <span class="text-xs block font-semibold text-blue-500 uppercase">Tunis Chapter</span>
+                </div>
             </div>
-            <span class="text-xs font-semibold px-2.5 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">Stewart Alsop III Community</span>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-6 pt-24 pb-16 text-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent">
-            Architecting the Future of AI in Tunisia
-        </h1>
-        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Where local professionals, ambitious students, and creators meet to master the art of AI orchestration, workflow automation, and cognitive architecture.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="#join" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 font-medium rounded-xl transition duration-200 transform hover:-translate-y-0.5 glow-effect text-center">
-                Join the Community
-            </a>
-            <a href="#meetup" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 border border-slate-800 font-medium rounded-xl transition duration-200 text-center">
-                Next Meetup Info
-            </a>
-        </div>
+    <section class="max-w-4xl mx-auto px-6 pt-28 pb-20 text-center relative z-10">
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-8">Architecting the Future of AI in Tunisia</h1>
+        <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto mb-12">Where enterprise professionals, students, and tech creators converge to master AI orchestration.</p>
+        <a href="#join" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl">Join the Community</a>
     </section>
-
-    <!-- The Vision / What We Do -->
-    <section class="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-6">
-        <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-2xl">
-            <div class="text-3xl mb-4">🚀</div>
-            <h3 class="text-lg font-bold mb-2">Bridge the Divide</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">Connecting hungry students from top universities with industry professionals looking for native AI talent.</p>
-        </div>
-        <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-2xl">
-            <div class="text-3xl mb-4">🛠️</div>
-            <h3 class="text-lg font-bold mb-2">Live Vibe-Coding</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">No boring lectures. We host rapid builds, hackathons, and teardowns showing how to launch products in hours.</p>
-        </div>
-        <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-2xl">
-            <div class="text-3xl mb-4">🌍</div>
-            <h3 class="text-lg font-bold mb-2">Global Network</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">Direct alignment with Stewart Alsop III’s network, plugging Tunisia straight into the global AI ecosystem.</p>
-        </div>
-    </section>
-
-    <!-- Next Meetup Section -->
-    <section id="meetup" class="max-w-4xl mx-auto px-6 py-16 border-t border-slate-900">
-        <div class="bg-gradient-to-r from-blue-950/40 via-indigo-950/20 to-slate-950 border border-indigo-500/20 rounded-3xl p-8 md:p-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -z-10"></div>
-            
-            <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">The Inaugural Meetup</span>
-            <h2 class="text-3xl font-bold mt-4 mb-6">Meetup #1: Beyond the Prompt</h2>
-            
-            <div class="grid sm:grid-cols-2 gap-6 text-slate-300 mb-8">
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl">📅</span>
-                    <div>
-                        <p class="font-semibold text-white">Date & Time</p>
-                        <p class="text-sm text-slate-400">Coming Soon (Late November 2026)</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl">📍</span>
-                    <div>
-                        <p class="font-semibold text-white">Location</p>
-                        <p class="text-sm text-slate-400">Tunis, Tunisia (Coworking Hub TBD)</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl">🌐</span>
-                    <div>
-                        <p class="font-semibold text-white">Special Guest</p>
-                        <p class="text-sm text-slate-400">Stewart Alsop III joining live online</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-3">
-                    <span class="text-xl">💻</span>
-                    <div>
-                        <p class="font-semibold text-white">Format</p>
-                        <p class="text-sm text-slate-400">"Teach people how to do it after you do it" Live Lab</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join Section (Call to Action) -->
-    <section id="join" class="max-w-md mx-auto px-6 py-16 text-center">
-        <h2 class="text-3xl font-bold mb-4">Secure Your Spot</h2>
-        <p class="text-slate-400 mb-8 text-sm">We are restricting the first meetup to a limited number of seats to keep collaboration tight. Join the waiting list now.</p>
-        
-        <!-- Registration Placeholder Form -->
-        <div class="space-y-3">
-            <input type="email" placeholder="Enter your email address" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl focus:outline-none focus:border-blue-500 transition text-sm text-white">
-            <button onclick="alert('Awesome! You are on the list. We will send you the venue update soon.')" class="w-full py-3 bg-white text-slate-950 hover:bg-slate-200 font-semibold rounded-xl transition duration-200 text-sm">
-                Request Invitation
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-600">
-        <p>© 2026 AI Whisperers Tunisia. Built with pure AI fire.</p>
-    </footer>
-
 </body>
 </html>
